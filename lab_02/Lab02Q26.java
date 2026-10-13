@@ -1,0 +1,21 @@
+package lab02.q26;
+
+// Compile from this lab folder: javac -d build *.java
+// Run: java -cp build lab02.q26.Lab02Q26
+
+import java.util.Scanner;
+
+public class Lab02Q26 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter day number (1=Monday, 7=Sunday):");
+        int day = sc.nextInt();
+        switch (day) {
+            case 1: case 2: case 3: case 4: case 5:
+                System.out.println("Weekday"); break;
+            case 6: case 7:
+                System.out.println("Weekend"); break;
+            default: System.out.println("Invalid day");
+        }
+    }
+}

@@ -1,0 +1,2 @@
+// Multiple catch blocks
+import java.util.Scanner;public class Q03 {public static void main(String[] args){try(Scanner sc=new Scanner(System.in)){System.out.print("Two integer strings: ");String a=sc.next(),b=sc.next();try{System.out.println(Integer.parseInt(a)/Integer.parseInt(b));}catch(NumberFormatException e){System.out.println("Not a valid integer");}catch(ArithmeticException e){System.out.println("Cannot divide by zero");}}}}

@@ -1,0 +1,2 @@
+// Sleep in one thread while another progresses
+public class Q26 {public static void main(String[] args)throws InterruptedException{Thread a=new Thread(()->{try{System.out.println("Sleeper starts");Thread.sleep(2000);System.out.println("Sleeper awakes");}catch(InterruptedException e){Thread.currentThread().interrupt();}});Thread b=new Thread(()->{for(int i=1;i<=4;i++)System.out.println("Other thread: "+i);});a.start();b.start();a.join();b.join();}}

@@ -1,0 +1,2 @@
+// Synchronized shared counter
+public class Q29 {static int counter=0;static synchronized void increment(){counter++;}public static void main(String[] args)throws InterruptedException{Runnable job=()->{for(int i=0;i<100000;i++)increment();};Thread[] ts=new Thread[8];for(int i=0;i<ts.length;i++){ts[i]=new Thread(job);ts[i].start();}for(Thread t:ts)t.join();System.out.println("Expected 800000; actual "+counter);}}

@@ -1,0 +1,2 @@
+// CarBean properties
+public class Q09 {public static class CarBean {private String make,model;private int year;public CarBean(){}public String getMake(){return make;}public void setMake(String s){make=s;}public String getModel(){return model;}public void setModel(String s){model=s;}public int getYear(){return year;}public void setYear(int y){year=y;}}public static void main(String[] args){CarBean c=new CarBean();c.setMake("Toyota");c.setModel("Corolla");c.setYear(2022);System.out.println(c.getMake()+" "+c.getModel()+" "+c.getYear());}}

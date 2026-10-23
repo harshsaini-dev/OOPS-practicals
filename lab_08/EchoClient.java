@@ -1,0 +1,1 @@
+import java.io.*;import java.net.*;public class EchoClient {public static void main(String[] args)throws Exception{try(Socket s=new Socket("localhost",5001);PrintWriter out=new PrintWriter(s.getOutputStream(),true);BufferedReader in=new BufferedReader(new InputStreamReader(s.getInputStream()))){out.println("Echo testing");System.out.println("Received: "+in.readLine());}}}

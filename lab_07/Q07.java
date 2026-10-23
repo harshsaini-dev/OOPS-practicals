@@ -1,0 +1,2 @@
+// Custom InvalidPasswordException
+public class Q07 {static class InvalidPasswordException extends Exception {InvalidPasswordException(String m){super(m);}}static void validate(String password)throws InvalidPasswordException {if(password.length()<6)throw new InvalidPasswordException("At least six characters required");}public static void main(String[] args){try{validate("abc");System.out.println("Valid password");}catch(InvalidPasswordException e){System.out.println(e.getMessage());}}}

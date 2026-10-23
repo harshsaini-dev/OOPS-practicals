@@ -1,0 +1,1 @@
+import java.io.*;import java.net.*;public class MultiClient {public static void main(String[] args)throws Exception{try(Socket s=new Socket("localhost",5002);PrintWriter out=new PrintWriter(s.getOutputStream(),true)){out.println(args.length==0?"Hello multi-client server":String.join(" ",args));}}}

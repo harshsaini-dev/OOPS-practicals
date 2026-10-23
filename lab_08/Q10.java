@@ -1,0 +1,2 @@
+// CircleBean computed properties
+public class Q10 {public static class CircleBean {private double radius;public CircleBean(){}public double getRadius(){return radius;}public void setRadius(double r){if(r<0)throw new IllegalArgumentException("Radius must be nonnegative");radius=r;}public double getArea(){return Math.PI*radius*radius;}public double getCircumference(){return 2*Math.PI*radius;}}public static void main(String[] args){CircleBean c=new CircleBean();c.setRadius(5);System.out.printf("Area %.2f, circumference %.2f%n",c.getArea(),c.getCircumference());}}

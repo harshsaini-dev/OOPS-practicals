@@ -1,0 +1,2 @@
+// throws NumberFormatException
+import java.util.Scanner;public class Q08 {static int readNumber(Scanner sc)throws NumberFormatException {System.out.print("Enter integer: ");return Integer.parseInt(sc.nextLine());}public static void main(String[] args){try(Scanner sc=new Scanner(System.in)){try{System.out.println(readNumber(sc));}catch(NumberFormatException e){System.out.println("Invalid numeric input");}}}}

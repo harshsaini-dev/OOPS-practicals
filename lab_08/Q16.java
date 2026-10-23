@@ -1,0 +1,2 @@
+// UDP MessageSender ping
+import java.net.*;import java.nio.charset.StandardCharsets;public class Q16 {public static void main(String[] args)throws Exception{try(DatagramSocket sock=new DatagramSocket()){byte[] data="Ping".getBytes(StandardCharsets.UTF_8);DatagramPacket packet=new DatagramPacket(data,data.length,InetAddress.getByName("127.0.0.1"),6000);sock.send(packet);System.out.println("Sent Ping");}}}

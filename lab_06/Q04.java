@@ -1,0 +1,2 @@
+// Employee and HRManager
+public class Q04 {static class Employee {void work(){System.out.println("Employee working");} double getSalary(){return 32000;}} static class HRManager extends Employee {@Override void work(){System.out.println("HR managing recruitment");} void addEmployee(){System.out.println("Employee added");}} public static void main(String[] args){HRManager hr=new HRManager();hr.work();hr.addEmployee();System.out.println(hr.getSalary());}}

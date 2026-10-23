@@ -1,0 +1,2 @@
+// UDP MessageReceiver
+import java.net.*;import java.nio.charset.StandardCharsets;public class Q17 {public static void main(String[] args)throws Exception{try(DatagramSocket socket=new DatagramSocket(6000)){byte[] buffer=new byte[1024];DatagramPacket p=new DatagramPacket(buffer,buffer.length);System.out.println("Waiting on UDP 6000");socket.receive(p);System.out.println("Received: "+new String(p.getData(),p.getOffset(),p.getLength(),StandardCharsets.UTF_8));}}}

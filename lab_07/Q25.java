@@ -1,0 +1,2 @@
+// Thread priority experiment
+public class Q25 {public static void main(String[] args)throws InterruptedException{Runnable r=()->System.out.println(Thread.currentThread().getName()+" priority "+Thread.currentThread().getPriority());Thread[] t={new Thread(r,"MIN"),new Thread(r,"NORMAL"),new Thread(r,"MAX")};t[0].setPriority(Thread.MIN_PRIORITY);t[1].setPriority(Thread.NORM_PRIORITY);t[2].setPriority(Thread.MAX_PRIORITY);for(Thread x:t)x.start();for(Thread x:t)x.join();System.out.println("Priorities do not guarantee order");}}

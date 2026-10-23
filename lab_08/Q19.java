@@ -1,0 +1,2 @@
+// FileDownloader using URLConnection
+import java.net.*;import java.io.*;import java.nio.file.*;public class Q19 {public static void main(String[] args)throws Exception{URL url=new URL("https://www.example.com/sample.txt");URLConnection conn=url.openConnection();conn.setConnectTimeout(5000);conn.setReadTimeout(5000);Path output=Paths.get("sample.txt");try(InputStream in=conn.getInputStream()){Files.copy(in,output,StandardCopyOption.REPLACE_EXISTING);}System.out.println("Downloaded: "+output.toAbsolutePath());}}

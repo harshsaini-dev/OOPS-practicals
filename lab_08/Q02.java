@@ -1,0 +1,2 @@
+// RectangleBean area and perimeter
+public class Q02 {public static class RectangleBean {private double length,width;public RectangleBean(){}public double getLength(){return length;}public void setLength(double v){length=v;}public double getWidth(){return width;}public void setWidth(double v){width=v;}public double getArea(){return length*width;}public double getPerimeter(){return 2*(length+width);}}public static void main(String[] args){RectangleBean b=new RectangleBean();b.setLength(5);b.setWidth(3);System.out.println("Area "+b.getArea()+", perimeter "+b.getPerimeter());}}

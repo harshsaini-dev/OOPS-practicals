@@ -1,0 +1,2 @@
+// Server receives and displays message
+import java.net.*;import java.io.*;public class Q14 {public static void main(String[] args)throws Exception{try(ServerSocket server=new ServerSocket(5000)){System.out.println("Listening on 5000");try(Socket socket=server.accept();BufferedReader input=new BufferedReader(new InputStreamReader(socket.getInputStream()))){String msg=input.readLine();System.out.println("Received from client: "+msg);}}}}

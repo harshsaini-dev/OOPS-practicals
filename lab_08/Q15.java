@@ -1,0 +1,2 @@
+// TCP EchoServer
+import java.net.*;import java.io.*;public class Q15 {public static void main(String[] args)throws Exception{try(ServerSocket server=new ServerSocket(5001)){System.out.println("EchoServer listening on port 5001");try(Socket socket=server.accept();BufferedReader in=new BufferedReader(new InputStreamReader(socket.getInputStream()));PrintWriter out=new PrintWriter(socket.getOutputStream(),true)){String msg=in.readLine();out.println(msg);System.out.println("Echoed: "+msg);}}}}

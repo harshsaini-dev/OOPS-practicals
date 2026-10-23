@@ -1,0 +1,2 @@
+// Real-world concurrent processing tasks
+public class Q30 {public static void main(String[] args)throws InterruptedException{Runnable invoices=()->{for(int i=1;i<=3;i++)System.out.println("Invoice worker processed #"+i);};Runnable reports=()->{for(int i=1;i<=3;i++)System.out.println("Report worker generated #"+i);};Thread a=new Thread(invoices,"InvoiceWorker"),b=new Thread(reports,"ReportWorker");a.start();b.start();a.join();b.join();System.out.println("Two independent workloads completed");}}
